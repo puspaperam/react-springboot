@@ -1,38 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <settings xmlns="http://maven.apache.org/SETTINGS/1.1.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd">
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0
+                              https://maven.apache.org/xsd/settings-1.1.0.xsd">
 
-  <servers>
-    <server>
-      <id>${SNAPSHOT_REPO}</id>
-      <username>${NEXUS_USERNAME}</username>
-      <password>${NEXUS_PASSWORD}</password>
-    </server>
-    <server>
-      <id>${RELEASE_REPO}</id>
-      <username>${NEXUS_USERNAME}</username>
-      <password>${NEXUS_PASSWORD}</password>
-    </server>
-    <server>
-      <id>${CENTRAL_REPO}</id>
-      <username>${NEXUS_USERNAME}</username>
-      <password>${NEXUS_PASSWORD}</password>
-    </server>
-    <server>
-      <id>${GROUP_REPO}</id>
-      <username>${NEXUS_USERNAME}</username>
-      <password>${NEXUS_PASSWORD}</password>
-    </server>
-  </servers>
+    <servers>
+        <server>
+            <id>bookworld-release</id>
+            <username>admin</username>
+            <password>nexusadmin</password>
+        </server>
 
-  <mirrors>
-    <mirror>
-      <id>${CENTRAL_REPO}</id>
-      <name>${CENTRAL_REPO}</name>
-      <url>http://${NEXUS_IP}:${NEXUS_PORT}/repository/${GROUP_REPO}/</url>
-      <mirrorOf>*</mirrorOf>
-    </mirror>
-  </mirrors>
+        <server>
+            <id>bookworld-snapshot</id>
+            <username>admin</username>
+            <password>nexusadmin</password>
+        </server>
+
+        <server>
+            <id>bookworld-group</id>
+            <username>admin</username>
+            <password>nexusadmin</password>
+        </server>
+    </servers>
+
+    <mirrors>
+        <mirror>
+            <id>bookworld-group</id>
+            <mirrorOf>*</mirrorOf>
+            <url>http://192.168.124.129:8081/repository/bookworld-group/</url>
+        </mirror>
+    </mirrors>
 
 </settings>
