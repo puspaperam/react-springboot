@@ -8,19 +8,19 @@
         <server>
             <id>bookworld-release</id>
             <username>admin</username>
-            <password>nexusadmin</password>
+            <password>admin</password>
         </server>
 
         <server>
             <id>bookworld-snapshot</id>
             <username>admin</username>
-            <password>nexusadmin</password>
+            <password>admin</password>
         </server>
 
         <server>
             <id>bookworld-group</id>
             <username>admin</username>
-            <password>nexusadmin</password>
+            <password>admin</password>
         </server>
     </servers>
 
